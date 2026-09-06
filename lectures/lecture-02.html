@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Лекція 2. Знайомство з фреймворком Vue.js.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/index.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Лекція 2. Знайомство з фреймворком Vue.js</h1>
+    <p>
+        <a href="index.html">Назад до змісту лекцій</a>
+    </p>
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        Лекція 2. Знайомство з фреймворком Vue.js
+    </h2>
+</section>
+
+<section class="slide">
+    <h2>План лекції:</h2>
+    <ol>
+        <li>Що таке Vue.js?</li>
+        <li>Історія створення Vue.js</li>
+        <li>Для чого використовують Vue.js?</li>
+        <li>Основні концепції Vue.js</li>
+        <li>DOM і Virtual DOM</li>
+        <li>Підключення фреймворку Vue.js</li>
+        <li>Структура стартового застосунку Vue.js</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Що таке js фреймворк</h2>
+    <p>A JavaScript framework is a pre-written collection of code that simplifies common tasks in web development. It
+        provides a structured way to build web applications, enforce best practices, and manage complex functionalities.
+        Key components of a JavaScript framework include <b>data binding, routing, and a component-based
+            architecture</b>.</p>
+    <p>Фреймворк JavaScript — це готовий набір коду, який спрощує виконання типових завдань у веб-розробці. Він
+        забезпечує структурований підхід до створення веб-додатків, дотримання найкращих практик та управління складними
+        функціональними можливостями. До основних компонентів фреймворку JavaScript належать прив’язка даних,
+        маршрутизація та архітектура на основі компонентів.</p>
+</section>
+
+<section class="slide">
+    <h2>Key Concepts: Data Binding, Routing and Component Architecture</h2>
+    <p>
+        <b>Зв'язування даних</b> - це механізм, який встановлює зв'язок між даними у застосунку та
+        інтерфейсом користувача. Це дозволяє при зміні даних автоматично оновлювати інтерфейс і навпаки.</p>
+    <p><b>Маршрутизація (роутинг) </b>- це процес визначення того, яке представлення або компонент повинен
+        відображатися на основі поточної URL-адреси.</p>
+    <p><b>Компонентна архітектура </b>- декомпозиція застосунку на багаторазові,
+        самодостатні будівельні блоки.</p>
+</section>
+
+<section class="slide">
+    <h2>Що таке Vue.js?</h2>
+    <p><b>Vue.js</b> — це фреймворк, який працює на JavaScript,
+        створений для розробки користувацьких інтерфейсів.
+        Він працює на базі звичайного HTML, CSS та JavaScript з
+        можливостями декларативно програмувати
+        користувацькі інтерфейси будь-якої складності на
+        основі компонентів.</p>
+    <img src="pictures/vue/1/1.png" alt="">
+</section>
+
+<section class="slide">
+    <h2>Історія створення Vue.js</h2>
+    <div style="display: flex">
+        <div style="font-size: 16px;">
+            <p>Vue.js був створений у 2014 році Еваном Ю, колишнім
+                співробітником Google.</p>
+            <p>Коли Еван Ю працював в Google Creative Labs, в нього
+                виникла необхідність швидко побудувати прототип складного
+                інтерфейсу, і потрібен був інструмент, щоб уникнути
+                написання повторюваного HTML. React лише починався,
+                AngularJS та Backbone були занадто громіздкі для
+                прототипування, тому Еван створив свій фреймворк.
+                З того часу Vue.js еволюціонував і дозволяє писати не тільки
+                прототипи, а й складні вебзастосунки. Оригінальний реліз Vue
+                відбувся в грудні 2014 року. Інформація про проєкт було
+                розміщено на Hacker News, Echo JS в день початкового релізу.
+                За один день проєкт з'явився на перших сторінках цих сайтів.</p>
+        </div>
+        <img src="pictures/vue/1/2.png" style="flex-shrink: 0" alt="">
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Цікаві факти про Vue.js</h2>
+    <div class="columns two">
+        <div style="font-size: 17.5px;">
+            <p>Vue.js модульний, що дозволяє
+                розробникам використовувати лише ті частини
+                фреймворку, які їм потрібні, а це робить його
+                легким і ефективним.</p>
+            <p>Vue.js має велику й активну спільноту, яка надає
+                розробникам багато ресурсів, таких як навчальні
+                посібники, плагіни та бібліотеки.</p>
+            <p>Vue.js був прийнятий багатьма компаніями,
+                включаючи Alibaba, Xiaomi та GitLab, завдяки
+                його простоті використання та продуктивності.</p>
+        </div>
+        <div>
+            <img src="pictures/vue/1/3.png" width="400" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Для чого використовують Vue.js?</h2>
+    <div style="font-size: 19px;">
+        <p><b>Основні функції Vue.js:</b> розробка
+            складних реактивних інтерфейсів,
+            декларативний рендеринг,
+            реалізація анімації за допомогою
+            CSS, зв’язування даних тощо.</p>
+        <p>Vue.js часто використовують в
+            проєктах, яким потрібно додати
+            реактивності, відображати
+            значення при введенні даних
+            користувачами.</p>
+        <p><b>Третя сфера застосування</b> – фронтенд блогів та
+            інших ресурсів на популярних CMS. З
+            використанням Vue.js можна створювати
+            динамічні інтерфейси. Вони реагують на
+            поведінку і адаптуються під кожного
+            користувача.</p>
+        <p>Завдяки маленькому розміру основної
+            бібліотеки фреймворк майже не навантажує
+            проєкти, в яких його використовують. Vue.js
+            відносять до прогресивних фреймворків. Його
+            легко масштабувати та застосовувати для
+            великих, високонавантажених односторінкових
+            застосунках</p>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Навіщо нам потрібен Vue.js?</h2>
+    <img src="pictures/vue/1/workflow.svg" alt="" style="display: block; margin: 0 auto">
+</section>
+
+<section class="slide">
+    <h2>Навіщо нам потрібен Vue.js?</h2>
+    <img src="pictures/vue/1/dry.svg" alt="" style="display: block; margin: 0 auto">
+</section>
+
+<section class="slide">
+    <h2>Бібліотека або Фреймворк?</h2>
+    <div class="columns two">
+        <div>
+            <p><b>Бібліотека</b> – це набори попередньо написаних фрагментів коду, які можна легко інтегрувати до
+                існуючого коду проекту. Таким чином, бібліотека є спеціалізованим інструментом для конкретних вузьких
+                потреб, а не універсальним рішенням для розробки всього проекту.</p>
+        </div>
+        <div>
+            <p>
+                <b>Фреймворк</b> є «шаблоном» для створення веб-додатку. Він забезпечує структуру, де можна розмістити
+                весь проект. «Шаблони» фреймворку створюють структуру з певними виділеними областями для вбудовування
+                коду, та знаходиться на більш високому рівні абстракції у порівнянні з бібліотекою.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Навіщо нам потрібен Vue.js?</h2>
+    <img src="pictures/vue/1/shop.png" alt="" width="600" style="display: block; margin: 0 auto">
+</section>
+
+<section class="slide">
+    <h2>Навіщо нам потрібен Vue.js?</h2>
+    <ul>
+        <li>Vue.js надає змогу не писати щоразу заново одні й ті самі повторювані речі, а саме відображення даних,
+            реагування на кліки, реагування ще на щось.
+        </li>
+        <li>Vue.js це фреймворк, це означає, що порівняно з іншими бібліотеками він жорстко нав'язує нам конкретну
+            архітектуру, змушує писати коди в такому стилі, в якому вимагає його сам Vue (менше в програміста свободи,
+            то менше ризиків для бізнесу).
+        </li>
+        <li>Vue.js забезпечує нам розділення на компоненти (це дає змогу програмісту прицільно працювати над конкретним
+            вузлом системи навіть якщо він не розуміє та не усвідомлює роботу всієї системи).
+        </li>
+        <li>
+            Vue.js реалізує низку концепцій - реактивність і двостороннє зв'язування (відобразити дані на сторінці, коли
+            користувач щось на сторінці зробив, то оновити дані).
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Реактивність - основні концепції Vue.js</h2>
+    <p><b>Реактивність</b> - це здатність реагувати на зміну даних та синхронізувати їх відображення.</p>
+    <img src="pictures/vue/1/reactivity.svg" alt="" width="600" style="display: block; margin: 0 auto">
+</section>
+
+<section class="slide">
+    <h2>Двостороннє зв'язування - основні концепції Vue.js</h2>
+    <p><b>Двостороннє зв'язування (two-way data binding)</b> у Vue.js означає, що зміни в моделі даних автоматично
+        відображаються в користувацькому інтерфейсі, а зміни в інтерфейсі автоматично оновлюють модель даних. Це
+        дозволяє зручно синхронізувати стан програми та забезпечує зручність роботи з формами та іншими інтерактивними
+        елементами.
+        <a href="https://ua.vuejs.org/examples/#form-bindings" target="_blank">Example.</a></p>
+    <p>У більшості випадків ми працюємо з даними, тому що, завдяки <b>двосторонньому зв'язуванню</b> та
+        <b>реактивності</b> можемо бути абсолютно впевненими, що дані синхронізовано з відображенням. Аже працювати з
+        об'єктами,що мають поля, набагато зручніше, ніж з html сторінкою, у якій є різні html-елементи, кожен зі своїми
+        івентами, властивостями і т.д.</p>
+</section>
+
+<section class="slide">
+    <h2>Декларативність - основні концепції Vue.js</h2>
+    <p><b>Декларативність</b> — одна з ключових концепцій Vue.js, яка означає, що розробник описує, що потрібно зробити,
+        а не як це зробити. У декларативному підході розробник визначає кінцевий стан інтерфейсу, а фреймворк бере на
+        себе завдання синхронізації стану даних з DOM.</p>
+    <p><b>DOM (Document Object Model)</b> — це програмний інтерфейс для HTML документів. Він представляє документ у
+        вигляді дерева об'єктів, де кожен об'єкт є частиною документа. DOM дозволяє програмам і скриптам динамічно
+        надавати доступ до вмісту документа та змінювати його структуру, стиль і вміст тощо. <b>Основні концепції
+            DOM:</b> Дерево об'єктів, вузли (Nodes), доступ до елементів, маніпуляція елементами, події.</p>
+</section>
+
+<section class="slide">
+    <h2>DOM і Virtual DOM</h2>
+    <div style="display: flex">
+        <div style="font-size: 16px;">
+            <p>DOM — це деревоподібна структура, яка представляє
+                елементи вебсторінки та їхні зв’язки один з одним.
+                Віртуальний DOM — це концепція програмування на
+                JavaScript, яка використовується для ефективного
+                оновлення фактичної об’єктної моделі документа
+                (DOM) вебсторінки.</p>
+            <p>Віртуальний DOM служить посередником між кодом
+                JavaScript і DOM, що дає змогу швидше оновлювати
+                вебсторінку. Коли ви вносите зміни до вебсторінки за
+                допомогою JavaScript, віртуальний DOM спочатку
+                оновлює свою власну деревоподібну структуру, а потім
+                зміни відображаються у фактичному DOM. Цей підхід
+                більш ефективний, оскільки не вимагає оновлення
+                всього DOM щоразу, коли відбувається зміна. Натомість
+                оновлюється лише та частина DOM, яка була змінена</p>
+        </div>
+        <div>
+            <img src="pictures/vue/1/4.png" width="350" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>DOM і Virtual DOM</h2>
+    <p style="font-size: 16px; line-height: 1.2;">Подумайте про Virtual DOM як
+        про проєкт або чорнову
+        версію будинку. Ви можете
+        вносити зміни в проєкт, але
+        вони не будуть відображені в
+        фактичному будинку, доки ви
+        їх не передасте. Це економить
+        час і зусилля, оскільки ви
+        можете внести кілька змін до
+        проєкту, перш ніж застосувати
+        їх до будинку (<a href="https://medium.com/naukri-engineering/naukriengineering-virtual-dom-fa8019c626b"
+                          target="_blank">Medium: Virtual DOM</a>)</p>
+    <img src="pictures/vue/1/5.png" alt="" width="650" style="display: block; margin: 0 auto">
+</section>
+
+<section class="slide">
+    <h2>Декларативність - основні концепції Vue.js</h2>
+    <ol>
+        <li><b>Шаблони (Templates)</b> - дозволяють описувати структуру користувацького інтерфейсу за допомогою HTML.
+            Вони використовують декларативний синтаксис для прив'язки даних і визначення логіки рендерингу.
+            <a href="https://ua.vuejs.org/guide/essentials/template-syntax.html#template-syntax" target="_blank">Documentation.</a>
+        </li>
+        <li><b>Директиви (Directives)</b> - це спеціальні атрибути, які додають логіку до HTML елементів. Вони
+            забезпечують декларативний спосіб прив'язки даних і маніпуляції з DOM.
+            <a href="https://ua.vuejs.org/guide/essentials/template-syntax.html#directives" target="_blank">Documentation.</a>
+        </li>
+    </ol>
+    <p><b>Декларативний рендеринг</b> - Vue розширює стандартний HTML шаблонним синтаксисом, який дозволяє нам
+        декларативно задавати структуру HTML на основі стану описаного у JavaScript.
+        <a href="https://ua.vuejs.org/examples/#form-bindings" target="_blank">Example.</a></p>
+</section>
+
+<section class="slide">
+    <h2>Компоненти - основні концепції Vue.js</h2>
+    <p><b>Компоненти</b> — це блоки, які дозволяють нам розділити інтерфейс користувача (UI) на незалежні частини, які
+        можна багаторазово використовувати, і думати про кожну частину окремо. <a
+            href="https://ua.vuejs.org/guide/essentials/component-basics.html" target="_blank">Documentation.</a>
+    </p>
+    <img src="pictures/vue/1/components.png" alt="" width="650" style="display: block; margin: 0 auto">
+</section>
+
+<section class="slide">
+    <h2>Основні концепції Vue.js</h2>
+    <ol>
+        <li><a href="https://ua.vuejs.org/guide/essentials/reactivity-fundamentals.html"
+               target="_blank">Реактивність</a>.
+        </li>
+        <li><a href="https://ua.vuejs.org/guide/essentials/forms.html#form-input-bindings">Двостороннє зв'язування</a>.
+        </li>
+        <li><a href="https://ua.vuejs.org/guide/essentials/template-syntax.html">Декларативність (Templates,
+            Directives)</a>.
+        </li>
+        <li><a href="https://ua.vuejs.org/guide/essentials/component-basics.html">Компоненти</a>.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Налаштування середовища для розробки</h2>
+    <ul>
+        <li>
+            <a href="https://ua.vuejs.org/guide/quick-start.html" target="_blank">Documentation</a>
+        </li>
+        <li>
+            Швидко спробувати Vue можна безпосередньо в пісочницях:
+            <ul>
+                <li>
+                    <a href="https://play.vuejs.org/#eNp9kUFLwzAUx7/KM5cqzBXR0+gGKgP1oKKCl1xG99ZlpklIXuag9Lv7krK5w9it7//7v/SXthP3zo23EcVEVKH2yhEEpOhm0qjWWU/QgccV9LDytoWCq4U00tTWBII2NDBN/LJ4Qq0tfFuvlxfFlTRVORzHB/FA2Dq9IOQJoFrfzLouL/d9VfKUU2VcJNhet3aJeioFcymgZFiVR/tiJCjw61eqGW+CNWzepX0pats6pdG/OVKsJ8UEMklswXa/LzkjH3G0z+s11j8n8k3YpUyKd48B/RalODBa+AZpwPPPV9zx8wGyfdTcPgM/MFgdk+NQe4hmydpHvWz7nL+/Ms1XmO8ITdhfKommZp/7UvA/eTxz9X/d2/Fd3pOmF/0fEx+nNQ=="
+                       target="_blank">Vue Playground</a></li>
+                <li><a href="https://jsfiddle.net/z6d9k84y/" target="_blank">JSFiddle</a></li>
+                <li>
+                    <a href="https://stackblitz.com/edit/vitejs-vite-4aviw4?file=src%2Fcomponents%2FHelloWorld.vue&terminal=dev"
+                       target="_blank">StackBlitz</a></li>
+                <li><a href="https://codesandbox.io/" target="_blank">Codesandbox</a></li>
+            </ul>
+        </li>
+        <li>
+            Створення застосунку Vue (Передумови: знайомство з командним рядком, Node.js версії 18.0 або новіша). Як
+            створити Vue одно-сторінковий додаток на вашому локальному комп'ютері? Такі проєкти використовують збірку,
+            яка заснована на Vite, і дозволяє використовувати одно-файлові компоненти Vue (SFC).
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Вибір IDE/редактора коду</h2>
+    <ul>
+        <li>Visual Studio Community</li>
+        <li>Web Storm</li>
+        <li>PHP Storm</li>
+        <li>Visual Studio Code</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Vanilla JS vs Vue.js</h2>
+    <p>Приклади у директорії <b>lectures/examples/vue/01-intro</b></p>
+</section>
+
+<section class="slide">
+    <h2>Vanilla JS vs Vue.js</h2>
+    <p>Vue.js значно спрощує роботу з DOM, автоматизуючи такі операції, як умовний рендеринг та ітерації.</p>
+    <p>У чистому JavaScript потрібно вручну додавати слухачі подій і оновлювати DOM, тоді як у Vue.js весь процес
+        реактивного оновлення відбувається автоматично, що робить код більш простим і чистим.</p>
+    <p>Чистий JavaScript вимагає більше ручного управління станом і DOM-елементами.</p>
+    <p>Vue.js значно спрощує обробку форм завдяки двосторонній прив'язці даних (v-model) і директивам для подій.</p>
+</section>
+
+<section class="slide">
+    <h2>Vue CLI (Deprecated) use instead create-vue!</h2>
+    <div class="columns two">
+        <div style="font-size: 19px;">
+            <p>Щоб розпочати роботу з Vue.js, вам спочатку
+                потрібно створити новий проєкт. Один із
+                найпростіших способів зробити це —
+                використати Vue CLI: <a href="https://cli.vuejs.org/guide/cli-service.html"
+                                        target="_blank">cli-service</a>
+            </p>
+            <p>Vue CLI — інструмент командного рядка, який
+                допомагає швидко налаштувати новий проєкт
+                Vue.js із базовою файловою структурою та
+                певною конфігурацією за замовчуванням.</p>
+        </div>
+        <img src="pictures/vue/1/6.png" alt="">
+    </div>
+</section>
+
+<section class="slide">
+    <h2>create-vue (Recommended)</h2>
+    <p>create-vue - the recommended way to start a Vite-powered Vue project (<a
+        href="https://ua.vuejs.org/guide/quick-start.html#creating-a-vue-application" target="_blank">Створення
+        застосунку Vue</a>)
+    </p>
+    <ul>
+        <li>Vite-Powered: Vue CLI is based on webpack, while create-vue is based on <a href="https://vitejs.dev/"
+                                                                                       target="_blank">Vite</a>. Vite
+            supports most of the
+            configured conventions found in Vue CLI projects out of the box, and provides a significantly better
+            development experience due to its extremely fast startup and hot-module replacement speed.
+        </li>
+        <li>Scaffolding Tool: Unlike Vue CLI, create-vue itself is just a scaffolding tool. It creates a pre-configured
+            project based on the features you choose, and delegates the rest to Vite. Projects scaffolded this way can
+            directly leverage the <a href="https://vitejs.dev/plugins/" target="_blank">Vite plugin</a> ecosystem which
+            is Rollup-compatible.
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/client-web-systems" target="_blank">Fork me on
+        GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/index.js"></script>
+</body>
+</html>

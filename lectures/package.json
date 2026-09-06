@@ -1,0 +1,21 @@
+{
+    "private": true,
+    "files": [
+        "pictures/**",
+        "index.html",
+        "lecture-01.html"
+    ],
+    "scripts": {
+        "serve": "shower serve",
+        "bundle": "shower bundle",
+        "archive": "shower archive",
+        "pages": "shower pages"
+    },
+    "dependencies": {
+        "@shower/core": "^3.6.0",
+        "@shower/ribbon": "^4.2.0"
+    },
+    "devDependencies": {
+        "@shower/cli": "^1.1.1"
+    }
+}

@@ -1,0 +1,39 @@
+.presentations-list {
+    .slide {
+        cursor: pointer;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.slide {
+    padding: 75px 40px 20px;
+    font-size: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin: 15px 0;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    .shout {
+        font-size: 100px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+    }
+
+    .mark {
+        background-color: var(--color-yellow);
+    }
+}
+
