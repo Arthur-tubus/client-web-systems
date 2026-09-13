@@ -22,7 +22,7 @@
 . nodejs https://nodejs.org/en
 . package.json https://docs.npmjs.com/cli/v10/configuring-npm/package-json
 . Functions - https://www.typescriptlang.org/docs/handbook/2/functions.html#handbook-content
-JavaScript Classes - https://uk.javascript.info/classes
+. JavaScript Classes - https://uk.javascript.info/classes
 . Classes - https://www.typescriptlang.org/docs/handbook/2/classes.html
 . Object Types - https://www.typescriptlang.org/docs/handbook/2/objects.html
 
