@@ -67,7 +67,11 @@ lab-app/
 │   └── validation.test.ts
 │
 ├── public/
-│   └── index.html                 # тільки <div id="app"></div>
+│   └── favicon.ico                 # статичні файли, які доступні користувачам напряму
+│                                   # через інтернет без обробки сервером чи бекенд-кодом
+│
+├── index.html                 # тільки <div id="app"></div>
+│
 │
 ├── .eslintrc.json
 ├── .prettierrc
