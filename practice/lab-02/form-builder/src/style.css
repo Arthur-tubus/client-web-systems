@@ -1,0 +1,132 @@
+:root {
+  --color-bg: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-border: #dcdfe6;
+  --color-text: #1f2430;
+  --color-muted: #6b7280;
+  --color-primary: #3b5bdb;
+  --color-primary-hover: #2f4cc7;
+  --color-success: #1a7f37;
+  --color-success-bg: #e6f6ea;
+  --color-error: #c92a2a;
+  --color-error-bg: #fdecec;
+  --radius: 10px;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.fb-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.fb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fb-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.fb-control {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.fb-control:focus {
+  border-color: var(--color-primary);
+}
+
+.fb-error {
+  font-size: 13px;
+  color: var(--color-error);
+}
+
+.fb-submit {
+  margin-top: 4px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.fb-submit:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.fb-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.fb-submit--loading {
+  position: relative;
+}
+
+.fb-status {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.fb-status--success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.fb-status--error {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.fb-hint {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--color-muted);
+  text-align: center;
+}
